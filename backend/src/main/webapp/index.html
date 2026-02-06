@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to BookStore API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdf6e3;
+            text-align: center;
+            padding: 40px;
+            color: #333;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+        }
+        h2 {
+            margin-top: 40px;
+            color: #1a1a1a;
+        }
+        ul {
+            text-align: left;
+            display: inline-block;
+            font-size: 1em;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .resource {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>📚 Welcome to the BookStore API</h1>
+    <p>This is a RESTful API for managing books, authors, customers, carts, and orders.</p>
+
+    <div class="resource">
+        <h2>BookResource (/bookstore/api/books)</h2>
+        <ul>
+            <li>POST /bookstore/api/books</li>
+            <li>GET /bookstore/api/books</li>
+            <li>GET /bookstore/api/books/{id}</li>
+            <li>PUT /bookstore/api/books/{id}</li>
+            <li>DELETE /bookstore/api/books/{id}</li>
+        </ul>
+    </div>
+
+    <div class="resource">
+        <h2>AuthorResource (/bookstore/api/authors)</h2>
+        <ul>
+            <li>POST /bookstore/api/authors</li>
+            <li>GET /bookstore/api/authors</li>
+            <li>GET /bookstore/api/authors/{id}</li>
+            <li>PUT /bookstore/api/authors/{id}</li>
+            <li>DELETE /bookstore/api/authors/{id}</li>
+            <li>GET /bookstore/api/authors/{id}/books</li>
+        </ul>
+    </div>
+
+    <div class="resource">
+        <h2>CustomerResource (/bookstore/api/customers)</h2>
+        <ul>
+            <li>POST /bookstore/api/customers</li>
+            <li>GET /bookstore/api/customers</li>
+            <li>GET /bookstore/api/customers/{id}</li>
+            <li>PUT /bookstore/api/customers/{id}</li>
+            <li>DELETE /bookstore/api/customers/{id}</li>
+        </ul>
+    </div>
+
+    <div class="resource">
+        <h2>CartResource (/bookstore/api/customers/{customerId}/cart)</h2>
+        <ul>
+            <li>POST /bookstore/api/customers/{customerId}/cart/items</li>
+            <li>GET /bookstore/api/customers/{customerId}/cart</li>
+            <li>PUT /bookstore/api/customers/{customerId}/cart/items/{bookId}</li>
+            <li>DELETE /bookstore/api/customers/{customerId}/cart/items/{bookId}</li>
+        </ul>
+    </div>
+
+    <div class="resource">
+        <h2>OrderResource (/bookstore/api/customers/{customerId}/orders)</h2>
+        <ul>
+            <li>POST /bookstore/api/customers/{customerId}/orders</li>
+            <li>GET /bookstore/api/customers/{customerId}/orders</li>
+            <li>GET /bookstore/api/customers/{customerId}/orders/{orderId}</li>
+        </ul>
+    </div>
+</body>
+</html>
